@@ -1,4 +1,5 @@
-﻿using TEntityFrameworkSample.Core;
+﻿using System.Linq;
+using TEntityFrameworkSample.Core;
 using TEntityFrameworkSample.Core.Data;
 using TEntityFrameworkSample.Core.Domain.Users;
 using TEntityFrameworkSample.Services.Users;
@@ -20,7 +21,7 @@ namespace TEntityFrameworkSample.Services.Data.Users
 
         public IPagedList<User> GetAll(int pageIndex = 0, int pageSize = int.MaxValue)
         {
-            var query = _userRepository.Table;
+            var query = _userRepository.Table.OrderByDescending(u => u.CreateTime);
 
             return new PagedList<User>(query, pageIndex, pageSize);
         }

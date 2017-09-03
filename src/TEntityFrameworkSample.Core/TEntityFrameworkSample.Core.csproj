@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,11 +46,18 @@
   <ItemGroup>
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Users\User.cs" />
+    <Compile Include="Infrastructure\DefaultHost.cs" />
+    <Compile Include="Infrastructure\DefaultHostContainer.cs" />
+    <Compile Include="Infrastructure\IHost.cs" />
+    <Compile Include="Infrastructure\IHostContainer.cs" />
+    <Compile Include="Infrastructure\Starter.cs" />
     <Compile Include="IPagedList.cs" />
     <Compile Include="PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
