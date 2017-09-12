@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -10,6 +11,7 @@ namespace TEntityFrameworkSample.Data
     {
         public DefaultDbContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
+            Database.Log = m => Debug.WriteLine(m);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

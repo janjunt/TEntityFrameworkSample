@@ -7,6 +7,6 @@ namespace TEntityFrameworkSample.Services.Users
     {
         void Add(User user);
 
-        IPagedList<User> GetAll(int pageIndex = 0, int pageSize = int.MaxValue);
+        IPagedList<UserInfo> GetAll(int pageIndex = 0, int pageSize = int.MaxValue);
     }
 }

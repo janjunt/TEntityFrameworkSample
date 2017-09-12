@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Domain\CodeDic.cs" />
     <Compile Include="Domain\Users\User.cs" />
     <Compile Include="Infrastructure\DefaultHost.cs" />
     <Compile Include="Infrastructure\DefaultHostContainer.cs" />

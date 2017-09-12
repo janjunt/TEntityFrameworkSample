@@ -19,7 +19,7 @@ namespace TEntityFrameworkSample.Console
             var users = userService.GetAll();
             foreach(var user in users)
             {
-                System.Console.WriteLine($"{user.Id}:{user.Name}");
+                System.Console.WriteLine($"{user.User.Id}:{user.User.Name}/{user.CodeDic.Value}");
             }
 
             System.Console.ReadLine();
